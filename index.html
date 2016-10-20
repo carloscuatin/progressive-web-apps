@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Progressive Web Apps – HTML Presentation Framework</title>
+
+		<meta name="description" content="A simple presentation about progressive web apps">
+		<meta name="author" content="Fábio Antunes">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blood.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section>
+					<h1>
+						<span class="fragment" data-fragment-index="2">Progressive</span>
+						Web
+						<span class="fragment" data-fragment-index="1">Apps</span>
+					</h1>
+				</section>
+
+        <section>
+          <h2>Carlos Cuatin</h2>
+          <span class="fragment" data-fragment-index="1">Frontend & Mobile App Developer</span><br>
+          <a class="fragment" data-fragment-index="2" href="http://twitter.com/carloscuatin">@carloscuatin</a>
+        </section>
+
+				<section>
+          <blockquote cite="https://twitter.com/beverloo">
+            <p>
+              A progressive web app provides an app-like user experience that is low friction and is built using modern web capibilities
+            </p>
+          </blockquote>
+				</section>
+
+				<section data-background="https://media.giphy.com/media/95jaWzP8R4lSE/giphy.gif"></section>
+
+				<section>
+					<section>
+						<h2>Unordered list with some definitions</h2>
+						<ul>
+							<li class="fragment">PWAs are the future!</li>
+							<li class="fragment">PWAs aren't packaged, distributed or deployed through app stores</li>
+							<li class="fragment">PWAs tend to behave, look and feel like Native Apps</li>
+							<li class="fragment">PWAs request permissions in an incremental way</li>
+							<li class="fragment">PWAs start as a website and become progressively more “app”</li>
+						</ul>
+					</section>
+
+          <section>
+            <h2>What are PWAs?</h2>
+            <blockquote cite="https://developers.google.com/web/progressive-web-apps/">
+              <p>
+                Progressive Web Applications take advantage of new technologies
+                to bring the best of mobile sites and native applications to users.
+                They're reliable, fast, and engaging.
+              </p>
+              <footer>- Google</footer>
+            </blockquote>
+
+            <aside class="notes">
+              It's important to remember that Progressive Web Apps work everywhere but are supercharged in modern browsers. Progressive enhancement is a backbone of the model.
+            </aside>
+          </section>
+
+					<section>
+						<h3>Wait! PWAs evolve?</h3>
+						<blockquote cite="https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/">
+							<p>
+								PWAs they’re just websites that took all the right vitamins. Sites that want to send you notifications or be on your home screen have to earn that right over time as you use them more and more.
+							</p>
+						</blockquote>
+
+						<img class="stretch" src="http://a4.files.biography.com/image/upload/c_fit,cs_srgb,dpr_1.0,h_1200,q_80,w_1200/MTE5NDg0MDU0OTM4NjE3MzU5.jpg" alt="" />
+						<p class="fragment">
+							<a href="https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/" target="_blank">
+								@Charles Darwin
+							</a>
+						</p>
+					</section>
+
+					<section>
+						<h3>Alright, Websites with steroids so what?</h3>
+						<h4>
+							Why do we need this?
+						</h4>
+						<ul>
+							<li class="fragment">Cross platform, Chrome and Opera already support it</li>
+							<li class="fragment">Low friction! Good for users good for Websites</li>
+							<li class="fragment">Last but not least, Google needs it and so all the web companies</li>
+						</ul>
+
+            <aside class="notes">
+							If we only had mobile apps, google and other search engines wouldn't be able to track and index information
+						</aside>
+					</section>
+				</section>
+
+        <section>
+          <section>
+            <h3>Statistics</h3>
+              <blockquote cite="https://www.youtube.com/watch?v=m2a9hlUFRhg">
+                <h2>25</h2>
+                is the average apps used per month by a mobile user
+              </blockquote>
+
+              <blockquote cite="https://www.youtube.com/watch?v=m2a9hlUFRhg">
+                <h2>100+</h2>
+                sites navigated to per month by the average Chrome for Android user
+              </blockquote>
+            </section>
+
+            <section>
+              <blockquote cite="https://www.youtube.com/watch?v=m2a9hlUFRhg">
+                <h1>80%</h1>
+                of time spent is in  User's top 3 Apps
+              </blockquote>
+            </section>
+
+            <section data-state="slideReach">
+              <h1>Growth</h1>
+                <svg id="uniqueVisitors"></svg>
+                  <p>
+                    Comparing the reach of the 1000 top Apps to the corresponding 1000 top websites
+                  </p>
+				    </section>
+
+            <section>
+              <blockquote cite="https://www.youtube.com/watch?v=m2a9hlUFRhg">
+                <h1>2x</h1>
+                growth in mobile web traffic vs growth in app traffic
+              </blockquote>
+
+              <aside class="notes">
+                If we narrow down the 1000 top apps only the first twelve generate more traffic on their native apps than their mobile websites. these are the youtube, instagram, pinterest.
+              </aside>
+            </section>
+          </section>
+
+          <section>
+            <section>
+              <h2>PWAs key features</h2>
+              <ul>
+                <li class="fragment">Performance!</li>
+                <li class="fragment">Background Sync</li>
+                <li class="fragment">Durable storage</li>
+                <li class="fragment">Web Bluetooth, WebUSb & NFC</li>
+                <li class="fragment">Fast, Secure & Responsive</li>
+                <li class="fragment">Offline</li>
+                <li class="fragment">Push Notifications!!</li>
+                <li class="fragment">Homescreen Icon</li>
+              </ul>
+            </section>
+
+            <section data-background="http://i2.kym-cdn.com/entries/icons/original/000/012/982/post-19715-Brent-Rambo-gif-thumbs-up-imgu-L3yP.gif"></section>
+          </section>
+
+          <section>
+            <section>
+              <h2>Service Workers!</h2>
+            </section>
+
+            <section>
+              <i>A service worker is a script that your browser runs in the background, separate from a web page, opening the door to features that don't need a web page or user interaction.</i>
+
+              <aside class="notes">
+                A service worker is a script that your browser runs in the background, separate from a web page, opening the door to features that don't need a web page or user interaction. Today, they already include features like push notifications and background sync. In the future service workers will support other things like periodic sync or geofencing
+              </aside>
+            </section>
+
+            <section>
+              <h2>Adding SW</h2>
+
+              <pre>
+                <code class="hljs lang-javascript" data-trim contenteditable>
+navigator.serviceWorker.register('/worker.js',{
+  scope: '/'  // optional
+}).then(successCallback, failureCallback);
+                </code>
+              </pre>
+            </section>
+
+            <section>
+              <h2>Lifecycle</h2>
+              <img class="stretch" src="https://developers.google.com/web/fundamentals/getting-started/primers/imgs/sw-lifecycle.png">
+            </section>
+          </section>
+
+          <section>
+            <section>
+              <h2>Push!</h2>
+
+              <p><i>Push messaging, send message from server to client</i></p>
+            </section>
+
+            <section>
+              <p>
+                Re-engage with your audience by showing, relevant, timely,
+                and contextual notifications.
+              </p>
+
+              <aside class="notes">
+                 ... when the browser is closed
+              </aside>
+            </section>
+
+            <section>
+            <h2>Manifest</h2>
+            <i style="font-size: 16px;">Register for GCP to setup Google Cloud Messaging API and be able to push messages directly to Chrome!</i>
+
+              <pre class="hljs lang-javascript"><code>{
+  "gcm_sender_id": "111222333444",
+  ...
+}
+</code></pre>
+            </section>
+            <section>
+              <h2>Register Client</h2>
+
+              <pre>
+                <code class="hljs lang-javascript" data-trim>
+registration.pushManager.subscribe({
+    userVisibleOnly: true
+  }).then(function(pushSubscription) {
+    // Send endpoint to your server
+    console.info(pushSubscription.endpoint);
+  }, function(error) {
+    console.error(error);
+  }
+);
+                </code>
+              </pre>
+
+              <aside class="notes">
+                <b><code>userVisibleOnly</code></b>: A boolean indicating that the returned push subscription will only be used for messages whose effect is made visible to the user.
+              </aside>
+            </section>
+
+            <section>
+              <h2>Endpoint</h2>
+
+              <pre><code>https://android.googleapis.com/gcm/send/{{USER_REGISTRATION_ID}}</code></pre>
+            </section>
+
+            <section>
+              <h2>Send message</h2>
+
+              <pre>
+                <!-- http://highlightjs.readthedocs.io/en/latest/css-classes-reference.html#language-names-and-aliases -->
+                <code class="hljs lang-bash" data-trim contenteditable>
+curl
+--header "Authorization: key=&lt;PUSH_API_KEY&gt;"
+--header "Content-Type: application/json"
+https://android.googleapis.com/gcm/send -d
+  "{\"registration_ids\":[
+    \"&lt;USER_REGISTRATION_ID&gt;\"
+  ]}"
+                </code>
+              </pre>
+            </section>
+
+            <section>
+              <h2>Receive</h2>
+
+              <pre>
+                <code class="hljs lang-bash" data-trim contenteditable>
+                  self.addEventListener('push', event => {});
+                </code>
+              </pre>
+
+              <aside class="notes">
+                <p>
+                  <b>event.target:</b> <code>ServiceWorkerGlobalScope</code>
+                </p>
+              </aside>
+            </section>
+          </section>
+
+          <section>
+            <section>
+              <h2>Power of Push Notifications</h2>
+              <h3>Beyond the Rack</h3>
+              <div>
+                <div class="pull-left half-width">
+                  <h1>+72%</h1>
+                  <p>increase in time spent for users visiting via push notifications</p>
+                </div>
+
+                <div class="pull-right half-width">
+                  <h1>+26%</h1>
+                  <p>increase in average spend per visit by users arriving via a push notification</p>
+                </div>
+              </div>
+              <aside class="notes">
+                users who re-engange with their website through push notifications spend on average 72% more time and they spend 26% more money.<br>
+                this is possible targetting users.
+              </aside>
+            </section>
+
+            <section>
+              <h2>Power of Push Notifications</h2>
+              <h3>Financial Times</h3>
+              <div>
+                <div class="pull-left half-width">
+                  <h1>+17%</h1>
+                  <p>click-through rate</p>
+                </div>
+
+                <div class="pull-right half-width">
+                  <h1>+90%</h1>
+                  <p>retention</p>
+                </div>
+              </div>
+            </section>
+          </section>
+
+          <section>
+            <section>
+              <h2>Register sync</h2>
+
+              <pre>
+                <code class="hljs lang-javascript" data-trim>
+navigator.serviceWorker.ready.then(swRegistration => {
+  return swRegistration.sync.register('mySyncTag');
+});
+                </code>
+              </pre>
+            </section>
+
+            <section>
+              <h2>Respond to <code>sync</code> event</h2>
+
+              <pre>
+                <code class="hljs lang-javascript" data-trim>
+self.addEventListener('sync', event => {
+  if (event.tag === 'mySyncTag') {
+    event.waitUntil(doSomeStuff());
+  }
+});
+                </code>
+              </pre>
+            </section>
+
+            <section>
+              <h2>Tags</h2>
+
+              <p>
+                Sync are registered with a tag <i>('mySyncTag)</i>.
+              </p>
+
+              <p>
+                Registering to the same tag will coalesce the with existing sync.
+                Which means it will only fire <b>ONCE</b>.
+              </p>
+            </section>
+
+            <section>
+              <h2>Failure</h2>
+
+              <p>
+                If it fails, another sync will be scheduled to retry.
+              </p>
+
+              <aside class="notes">
+                Retry syncs also wait for connectivity, and employ an exponential back-off.
+              </aside>
+            </section>
+
+            <section>
+              <h2>Restrictions</h2>
+
+              <aside class="notes">
+                (Not sure how accurate those are, read in an article from 12/2015)
+              </aside>
+
+              <p class="fragment">
+                Can only be registered when user is on the page.
+              </p>
+
+              <p class="fragment">
+                The event execution time is capped.
+
+                <aside class="notes">
+                  ... cannot ping server continuously or execute long running tasks.
+                </aside>
+              </p>
+            </section>
+          </section>
+
+          <section>
+            <h2>Homescreen!</h2>
+
+            <ul class="list-reset">
+              <li class="fragment">Icon on homescreen</li>
+              <li class="fragment">Splash Screen</li>
+              <li class="fragment">Integrated with device</li>
+              <li class="fragment">Manifest file in JSON</li>
+            </ul>
+
+            <aside class="notes">
+              <p>
+                Manifest much like Android / Java development
+              </p>
+            </aside>
+          </section>
+
+          <section>
+            <h2>Manifest</h2>
+
+            <pre>
+              <code class="hljs lang-json" data-trim>
+{
+  "name": "Progressive App",
+  "short_name": "Demo App",
+  "icons": [
+    {
+      "src": "/images/icon.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "density": 3.0
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "gcm_sender_id": "111222333444",
+  "permissions": [
+    "gcm",
+    "desktop-notification"
+  ]
+}
+                </code>
+              </pre>
+
+              <aside class="notes">
+                <p>
+                  First level citizen in the apps carousel if you choose so, which is specified by... (manifest)
+                </p>
+              </aside>
+          </section>
+
+          <section>
+            <h2>Quick recap</h2>
+
+              <p class="fragment">Online network handling</p>
+              <p class="fragment">Offline network handling</p>
+              <p class="fragment">Fetch</p>
+              <p class="fragment">Cache</p>
+              <p class="fragment">Background Sync</p>
+              <p class="fragment">Push</p>
+              <p class="fragment">Extensible web manifest</p>
+              <p class="fragment">Device integration</p>
+          </section>
+
+          <section>
+            <section>
+              <h2>Summing up:</h2>
+              <blockquote cite="https://medium.com/@davideast/chrome-developer-summit-recap-1137b022b2dc#.8lqsdq35g">
+                <p>
+                  Progressive Web Apps are modern, mobile first, offline web apps, that can compete with the best of those on native.
+                </p>
+              </blockquote>
+              <aside class="notes">
+                Progressive web apps will be a reliable alternative to native mobile apps, in the future the number of native web apps with crazy permissions will be much smaller
+              </aside>
+            </section>
+
+            <section data-background="https://admin.mashable.com/wp-content/uploads/2013/08/fist-pump.gif"></section>
+          </section>
+
+          <section>
+            <h2>Existing PWAs</h2>
+            <ul>
+              <li><a href="https://www.theguardian.com/info/developer-blog" target="_blank">The Guardian developer blog</a></li>
+              <li><a href="https://m.facebook.com/" target="_blank">Facebook mobile</a></li>
+              <li><a href="http://www.flipkart.com/" target="_blank">Flipkart</a></li>
+              <li><a href="https://airhorner.com/" target="_blank">Air Horner</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>More info</h2>
+            <ul>
+              <li><a href="https://developers.google.com/web/progressive-web-apps/" target="_blank">Progressive Web Apps Google</a></li>
+              <li><a href="https://dev.opera.com/blog/progressive-web-apps-future/" target="_blank">Opera Dev Blog</a></li>
+              <li><a href="http://tech-blog.flipkart.net/2015/11/progressive-web-app/" target="_blank">Flipkart dev blog</a></li>
+              <li><a href="http://arc.applause.com/2015/11/30/application-shell-architecture/" target="_blank">arc</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <h1>Questions?</h1>
+            <p>
+              Slides @ <a href="https://github.com/carloscuatin/progressive-web-apps">github.com/carloscuatin/progressive-web-apps</a>
+            </p>
+          </section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+        <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+            Reveal.addEventListener( 'slideReach', function() {
+                var data = [3.3,8.9];
+
+                var bar_w = 200,
+                    bar_h = 300,
+                    label_padding = 100,
+                    bar_padding = 225;
+
+                var x = d3.scale.linear()
+                      .domain([0, 1])
+                      .range([0, bar_w + bar_padding]);
+
+                var y = d3.scale.linear()
+                       .domain([0, d3.max(data)])
+                       .rangeRound([0, bar_h - label_padding]); // rangeRound to avoid antialiasing artifacts.
+
+                var chart = d3.select("#uniqueVisitors")
+                     .attr("class", "chart")
+                     .attr("width", (bar_w * data.length) + bar_padding)
+                     .attr("height", bar_h);
+
+                chart.selectAll("rect")
+                 .data(data)
+                 .enter()
+                 .append("rect")
+                 .attr("x", function(d, i) { return x(i) - .5; })
+                 .attr("y", function(d) { return bar_h - .5; })
+                 .attr("width", bar_w)
+                 .attr("class", function(d,i) {return i==0?'first':'second'})
+                 .transition().delay(function (d,i){ return (i+1) * 1600;})
+                 .duration(800)
+                 .attr("height", function(d) { return y(d); })
+                 .attr("y", function(d) { return bar_h - y(d) - .5; });
+
+                chart.selectAll("text")
+                 .data(data)
+                 .enter().append("text")
+                 .attr("width", bar_w)
+                 .attr("class", function(d,i) {return i==0?'first':'second'})
+                 .attr("x", function(d, i) { return x(i) + bar_w/2; })
+                 .attr("y", function(d) { return bar_h - y(d) - 60; })
+                 .attr("text-anchor", "middle")
+                 .transition().delay(function (d,i){ return (i+1) * 1600;})
+                 .duration(800)
+                 .text(function(d) { return d; });
+
+                 chart.selectAll("label")
+                  .data(data)
+                  .enter().append("text")
+                  .attr("width", bar_w)
+                  .attr("class", function(d,i) {return i==0?'first':'second'})
+                  .attr("x", function(d, i) { return x(i) + bar_w/2; })
+                  .attr("y", function(d) { return bar_h - y(d) - 20; })
+                  .attr("text-anchor", "middle")
+                  .transition().delay(function (d,i){ return (i+1) * 1600;})
+                  .duration(800)
+                  .text(function(d, i) { return i==0?'Mobile Apps':'Websites' });
+
+            } );
+
+		</script>
+
+	</body>
+</html>
